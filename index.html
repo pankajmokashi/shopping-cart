@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeeRex Store</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="name">TeeRex Store</div>
+            <div>
+                <a href="#">
+                    Products
+                    <span></span>
+                </a>
+                <span id="added-items" class="material-symbols-outlined">
+                    shopping_cart
+                    <sup id="count">0</sup>
+                </span>
+
+            </div>
+        </header>
+        <div class="content">
+            <div class="filter">
+                <div class="sec">
+                    <p>Colour</p>
+                    <div>
+                        <input type="checkbox" id="red">
+                        <label for="red">Red</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="blue">
+                        <label for="blue">Blue</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="green">
+                        <label for="green">Green</label>
+                    </div>
+                </div>
+                <div class="sec">
+                    <p>Gender</p>
+                    <div>
+                        <input type="checkbox" id="men">
+                        <label for="men">Men</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="women">
+                        <label for="women">Women</label>
+                    </div>
+                </div>
+                <div class="sec">
+                    <p>Price</p>
+                    <div>
+                        <input type="checkbox" id="0-250">
+                        <label for="">0-Rs250</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="251-450">
+                        <label for="">Rs251-Rs450</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id=">450">
+                        <label for=">450">>Rs.450</label>
+                    </div>
+                </div>
+                <div class="sec">
+                    <p>Type</p>
+                    <div>
+                        <input type="checkbox" id="polo">
+                        <label for="polo">Polo</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="hoodie">
+                        <label for="hoodie">Hoodie</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="basic">
+                        <label for="basic">Basic</label>
+                    </div>
+                </div>
+            </div>
+            <div class="content-container">
+                <nav>
+                    <input id="search-input" type="search" placeholder="Search for products...">
+                    <span id="search" class="material-symbols-outlined">search</span>
+                    <div class="filter-dropdown">
+                        <span id="filter-icon" class="material-symbols-outlined">filter_alt</span>
+                        <div id="display-filter" class="filter">
+                            <div class="sec">
+                                <p>Colour</p>
+                                <div>
+                                    <input type="checkbox" id="red">
+                                    <label for="red">Red</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="blue">
+                                    <label for="blue">Blue</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="green">
+                                    <label for="green">Green</label>
+                                </div>
+                            </div>
+                            <div class="sec">
+                                <p>Gender</p>
+                                <div>
+                                    <input type="checkbox" id="men">
+                                    <label for="men">Men</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="women">
+                                    <label for="women">Women</label>
+                                </div>
+                            </div>
+                            <div class="sec">
+                                <p>Price</p>
+                                <div>
+                                    <input type="checkbox" id="0-250">
+                                    <label for="">0-Rs250</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="251-450">
+                                    <label for="">Rs251-Rs450</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id=">450">
+                                    <label for=">450">>Rs.450</label>
+                                </div>
+                            </div>
+                            <div class="sec">
+                                <p>Type</p>
+                                <div>
+                                    <input type="checkbox" id="polo">
+                                    <label for="polo">Polo</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="hoodie">
+                                    <label for="hoodie">Hoodie</label>
+                                </div>
+                                <div>
+                                    <input type="checkbox" id="basic">
+                                    <label for="basic">Basic</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div id="card-container" class="cards-container">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+
+</html>

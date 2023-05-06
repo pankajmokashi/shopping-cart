@@ -1,0 +1,310 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+body{
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+    width: 10px;
+    cursor: pointer;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #c6c5c5 ; 
+    border-radius: 10px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    width: 1400px;
+    height: 100%;
+    transition: 0.5s;
+}
+.container > header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    background-color: #F1F0F0;
+    position: sticky;
+    top: 0;
+}
+header > .name{
+    font-size: 20px;
+    margin-left: 30px;
+    cursor: pointer;
+    font-weight: 600;
+}
+header > div{
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-right: 50px;
+}
+header a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+header a > span{
+    width: 75%;
+    border-top: 1px solid black;
+    cursor: pointer;
+}
+header .material-symbols-outlined{
+    background-color: #D3D4D2;
+    scale: 1.6;
+    padding: 8px;
+    position: relative; 
+    cursor: pointer;
+}
+header .material-symbols-outlined:active{
+    background-color: #5f5e5e;
+    color: white;
+}
+header .material-symbols-outlined sup{
+    font-size: 10px;
+    font-weight: 600;
+    position: absolute;
+}
+
+
+.container > .content{
+    display: flex;
+    padding: 0 30px;
+    width: calc(100% - 60px);
+    height: 100%;
+    gap: 40px;
+}
+
+.content > .filter{
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    padding: 20px;
+    width: calc(250px - 40px);
+    height: 400px;
+    gap: 20px;
+    position: sticky;
+    top: 180px;
+}
+.filter > .sec{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 16px;
+}
+.filter > .sec > div{
+    display: flex;
+    gap: 5px;
+}
+.filter > .sec > p{
+    font-weight: 600;
+}
+.filter > .sec input{
+    width: 16px;
+}
+
+.content > .content-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content-container > nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    gap: 10px;
+    position: sticky;
+    top: 80px;
+    background-color: white;
+}
+nav > input{
+    padding: 0 10px;
+    width: calc(350px - 20px);
+    font-size: 18px;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #969292;
+}
+nav > input:focus{
+    outline: none;
+}
+nav > span{
+    background-color: #969292;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+nav > span:active{
+    background-color: #5f5e5e;
+}
+nav > .filter-dropdown > span{
+    background-color: #969292;
+    color: white;
+    padding: 7px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative;
+    display: none;
+}
+nav > .filter-dropdown > span:active{
+    background-color: #5f5e5e;
+}
+nav > .filter-dropdown > .filter{
+    background-color: white;
+    position: absolute;
+    width: 400px;
+    top: 70px;
+    left: 30%;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    display: none;
+}
+
+.content-container > .cards-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 100%;
+    margin: 20px 0;
+    transition: 0.5s;
+}
+
+.cards-container > .card{
+    padding: 10px;
+    width: calc(240px - 20px);
+    height: 300px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.card > #img{
+    width: 100%;
+    height: 200px;
+    background-image: url('https://geektrust.s3.ap-southeast-1.amazonaws.com/coding-problems/shopping-cart/black-polo-men.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card > #prod-name{
+    font-weight: 700;
+    display: inline;
+    border-bottom: 1px solid black;
+}
+.card > #cart{
+    background-color: black;
+    color: white;
+    padding: 5px 0;
+    text-align: center;
+    cursor: pointer;
+    border: none;
+}
+
+@media screen and (max-width: 1360px) {
+    .content-container > .cards-container{
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .content > .filter{
+        display: none;
+    }
+    nav > .filter-dropdown > span{
+        display: flex;
+    }
+    .content-container > .cards-container{
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .content-container > .cards-container{
+        gap: 25px;
+        justify-content: center;
+    }
+    .cards-container > #card{
+        width: calc(200px - 20px);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .container{
+        width: 500px;
+    }
+    .container > header{
+        height: 60px;
+    }
+    header .material-symbols-outlined{
+        scale: 1.2;
+    }
+    .content-container > nav{
+        top: 60px;
+    }
+    .content{
+        border: 1px solid #b7b7b7;
+        border-top: none;
+    }
+    nav span{
+        background-color: black;
+    }
+    nav > .filter-dropdown > span{
+        background-color: black;
+    }
+    nav > .filter-dropdown > .filter{
+        left: 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container{
+        width: 380px;
+    }
+    header a{
+        display: none;
+    }
+    nav > input{
+        width: 100%;
+        font-size: 17px;
+    }
+    nav > .filter-dropdown > .filter{
+        left: -20px;
+        width: 320px;
+    }
+    #display-filter > .sec{
+        font-size: 10px;
+    }
+    .cards-container > #card{
+        width: calc(260px - 20px);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    nav > .filter-dropdown > .filter{
+        padding: 3px;
+        gap: 0;
+        width: 255px;
+        left: 0;
+    }
+    nav > input{
+        font-size: 13px;
+    }
+}
